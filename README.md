@@ -21,4 +21,8 @@
 + work locally, push to GITHUB
 + deploy @ [kavakings]
 
+
+### Links @ site
 [kavakings]: http://kavakings.com
+[logo]: //kavakings.com/image_main/waveLogo_transparent_white.png
+[root-folder]: //kavakings.com/image_main/
