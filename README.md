@@ -1,11 +1,11 @@
-* Kavakings
+# Kavakings
 + jekyll site
 + angular and bootstrap front-end
 
-** Purpose
+## Purpose
 + Friend in China needs an official site for his business which sells premium kava
 
-** Functions
+## Functions
 + Site should do the following:
     1. Provide brief and detailed information about Kava products
     2. Provide method for users to purchase Kava
@@ -16,7 +16,7 @@
     3. Contact representative by e-mail (through SECURE form)
     4. Purchase kava products via Paypal (or alternative)
 
-** Workflow
+## Workflow
 + will use TRELLO board w/ aspects of SCRUM to maintain workflow
 + work locally, push to GITHUB
 + deploy @ [kavakings]
