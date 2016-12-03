@@ -1,0 +1,26 @@
+    <img class="mySlides fade showimages" src="//kavakings.com/imageSlideShow/huashan.jpg" alt="huashan" />
+    <img class="mySlides fade showimages" src="//kavakings.com/imageSlideShow/jim_scubadiving.jpg" alt="jim_scubadiving" />
+    <img class="mySlides fade showimages" src="//kavakings.com/imageSlideShow/kitesurfing.jpg" alt="kite surfing" />
+    <img class="mySlides fade showimages" src="//kavakings.com/imageSlideShow/mountainStand.jpg" alt="mountain stand" />
+    <img class="mySlides fade showimages" src="//kavakings.com/imageSlideShow/someoneFlipping.jpg" alt="someoneFlipping" />
+    <img class="mySlides fade showimages" src="//kavakings.com/imageSlideShow/seheyuan.jpg" alt="seheyuan"  />
+
+
+
+<!-- ENTER JAVASCRIPT for SLIDESHOW -->
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); // Change image every 4 seconds
+}
+</script>
