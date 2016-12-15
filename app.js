@@ -1,4 +1,4 @@
-angular.module('root', [])
+const app = angular.module('root', [])
     .controller('RootCtrl', RootController);
 
 function RootController() {
