@@ -1,3 +1,5 @@
+app: /app.js
+
 safe:        false
 
 base-url:    /
