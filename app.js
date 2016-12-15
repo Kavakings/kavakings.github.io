@@ -1,14 +1,23 @@
-const app = angular.module('root', [])
-    .controller('RootCtrl', RootController);
+const app = angular.module("root", []).controller("RootCtrl", RootController);
 
 function RootController() {
     const ctrl = this;
 
 // controller SCALARS
-    ctrl.doit = false;
+
 
 // controller FUNCTIONS
+// NAV functions
+    function orderLink() {
+        alert("yeah!");
+    }
 
+// JUMBOTRON functions
+    function carousel() {
+        
+    }
 
 // defined FUNCTIONS 
+    ctrl.orderLink = orderLink;
+    ctrl.carousel = carousel;
 }
