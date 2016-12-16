@@ -32,7 +32,7 @@
     <script src="{{site.app}}"></script>
 
 </head>
-<body ng-controller="RootCtrl as body"
+<body ng-controller="RootCtrl as root"
 > 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -66,7 +66,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href=""
-                            ng-click="body.orderLink()"
+                            ng-click="root.orderLink()"
                         >Order
                         </a>
                     </li>
