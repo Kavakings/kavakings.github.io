@@ -2,3 +2,7 @@ app: /app.js
 
 title: Kavakings
 e-mail: Jim@kavakings.com
+
+logo: //kavakings.com/image_main/waveLogo_transparent_white.png
+single-bag-img: http://kavakings.com/image_main/kavaBag_1.jpg
+double-bag-img: http://kavakings.com/image_main/kavaBags_2.jpg
