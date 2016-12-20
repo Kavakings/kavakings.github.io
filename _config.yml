@@ -1,4 +1,5 @@
 app: /app.js
+include: [_media]
 
 title: Kavakings
 e-mail: Jim@kavakings.com

@@ -1,11 +1,21 @@
+import *.jpg from "./_media";
+
 const app = angular.module("root", []).controller("RootCtrl", RootController);
 
 function RootController($http) {
     const ctrl = this;
 
 // controller SCALARS
+    ctrl.carousel = [];
+
 
 // controller FUNCTIONS
+
+// function to put file names from _media into ctrl.carousel
+    function getCarousel() {
+
+    }
+
 // NAV functions
     function orderLink() {
         alert("yeah!");
@@ -26,6 +36,7 @@ function RootController($http) {
     }
 
 // defined FUNCTIONS 
+    ctrl.getCarousel = getCarousel;
     ctrl.orderLink = orderLink;
     ctrl.getImageUrls = getImageUrls;
     ctrl.carousel = carousel;
