@@ -12,6 +12,9 @@ function RootController($http) {
 // controller FUNCTIONS
 
 // function to put file names from _media into ctrl.carousel
+    //
+    // might try HARD-CODING in root dir to see if works
+    //
     function getCarousel() {
         $http.get("./_media/seheyuan.jpg")
             .then( (data) => {
