@@ -1,4 +1,4 @@
-import *.jpg from "./_media";
+// import seheyuan.jpg from "./_media/";
 
 const app = angular.module("root", []).controller("RootCtrl", RootController);
 
@@ -13,7 +13,12 @@ function RootController($http) {
 
 // function to put file names from _media into ctrl.carousel
     function getCarousel() {
-
+        $http.get("./_media/seheyuan.jpg")
+            .then( (data) => {
+                ctrl.carousel.push(data);
+                }
+            );
+        console.log(ctrl.carousel);
     }
 
 // NAV functions
@@ -25,15 +30,14 @@ function RootController($http) {
 // file structure for kavakings.com/cpanel is as follows: //kavakings.com/imageSlideShow/
     function getImageUrls() {
         image_urls = [];
-        image_urls = $http.get("http://kavakings.com/imageSlideShow/")
-            .then(
-                console.log(image_urls)
-            );
     }
 
     function carousel() {
         getImageUrls();
     }
+
+// ON-LOAD Functions
+    getCarousel();
 
 // defined FUNCTIONS 
     ctrl.getCarousel = getCarousel;
