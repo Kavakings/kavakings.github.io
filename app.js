@@ -29,6 +29,10 @@ function RootController($http) {
     // might try HARD-CODING in root dir to see if works
     //
     function getCarousel() {
+        let i = 0;
+        for (i = 0; i < readDir.files.length; i++){
+            console.log("yo");
+        }
     }
 
 // NAV functions
@@ -43,7 +47,7 @@ function RootController($http) {
     // }
 
 // ON-LOAD Functions
-    // getCarousel();
+    getCarousel();
 
 // defined FUNCTIONS 
     // ctrl._getAllFilesFromFolder = _getAllFilesFromFolder;
