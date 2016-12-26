@@ -14,8 +14,8 @@ function RootController($http) {
         let i = 0;
         $http.get("./carousel_images.json")
             .then( 
-                (data) => {
-                    
+                (capture) => {
+                    console.log(capture.data);
                 }
             )
     }
