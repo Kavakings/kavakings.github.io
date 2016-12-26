@@ -10,9 +10,11 @@ function RootController($http) {
 // controller FUNCTIONS
     function getCarousel() {
         let i = 0;
-        for (i = 0; i < length; i++){
-            console.log("yo");
-        }
+        $http.get("./carousel_images.json")
+            .then( (data) => {
+                console.log(data);
+                }
+            )
     }
 
 // NAV functions
@@ -21,7 +23,7 @@ function RootController($http) {
     }
 
 // ON-LOAD Functions
-    // getCarousel();
+    getCarousel();
 
 // defined FUNCTIONS 
     // ctrl._getAllFilesFromFolder = _getAllFilesFromFolder;

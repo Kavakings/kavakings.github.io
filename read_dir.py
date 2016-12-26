@@ -10,7 +10,7 @@ class CollectImagePaths(object):
 
     def makeJson(self):
         data = self.image_files
-        with open('data.txt', 'w+') as self.outfile:
+        with open('carousel_images.json', 'w+') as self.outfile:
             json.dump(data, self.outfile)
 
     def execAll(self):
