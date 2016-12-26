@@ -1,12 +1,17 @@
 const app = angular.module("root", [])
     .controller("RootCtrl", RootController);
 
+// TURNS OFF 'Possibly unhandled rejection ()'
+// app.config(['$qProvider', function ($qProvider) {
+//     $qProvider.errorOnUnhandledRejections(false);
+// }]);
+
 function RootController($http) {
     const ctrl = this;
 
 // controller SCALARS
     ctrl.image_path = [];
-    ctrl.carousel = "";
+    ctrl.carousel = [];
 
 // controller FUNCTIONS
 
@@ -27,13 +32,14 @@ function RootController($http) {
     }
 
     function carouselGo() {
+        // let path = "file:///home/billbunkum/git-repos/kavakings/_media/";
         let path = "./_media/";
         let i = 0;
         for (i = 0; i < ctrl.image_path.length; i++){
-            ctrl.carousel = path + ctrl.image_path[i];
+            ctrl.carousel.push(path + ctrl.image_path[i]);
             console.log(ctrl.carousel);
         }
-        setTimeout(carouselGo, 5000);
+        ctrl.full_carousel = ctrl.carousel;
     }
 
 // NAV functions
@@ -47,6 +53,7 @@ function RootController($http) {
 // defined FUNCTIONS 
     // ctrl._getAllFilesFromFolder = _getAllFilesFromFolder;
     ctrl.getCarouselImages = getCarouselImages;
+    // ctrl.getPaths = getPaths;
     ctrl.carouselGo = carouselGo;
     ctrl.orderLink = orderLink;
 }
