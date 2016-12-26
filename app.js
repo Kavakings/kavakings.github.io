@@ -5,7 +5,8 @@ function RootController($http) {
     const ctrl = this;
 
 // controller SCALARS
-    ctrl.carousel = [];
+    ctrl.image_path = [];
+    ctrl.carousel = "";
 
 // controller FUNCTIONS
 
@@ -17,9 +18,9 @@ function RootController($http) {
                 (capture) => {
                     dict_len = Object.keys(capture.data).length;
                     for (i = 0; i < dict_len; i++){
-                        ctrl.carousel.push(capture.data[i]);
+                        ctrl.image_path.push(capture.data[i]);
                     }
-                console.log(ctrl.carousel);
+                console.log(ctrl.image_path);
                 carouselGo();
                 }
             )
@@ -27,11 +28,10 @@ function RootController($http) {
 
     function carouselGo() {
         let path = "./_media/";
-        let image_path = "";
         let i = 0;
-        for (i = 0; i < ctrl.carousel.length; i++){
-            image_path = path + ctrl.carousel[i];
-            console.log(image_path);
+        for (i = 0; i < ctrl.image_path.length; i++){
+            ctrl.carousel = path + ctrl.image_path[i];
+            console.log(ctrl.carousel);
         }
         setTimeout(carouselGo, 5000);
     }
