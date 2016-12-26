@@ -10,7 +10,7 @@ function RootController($http) {
 // controller FUNCTIONS
 
 // grab endpoints from carousel_images.json
-    function getCarousel() {
+    function getCarouselImages() {
         let i = 0;
         $http.get("./carousel_images.json")
             .then( 
@@ -20,8 +20,20 @@ function RootController($http) {
                         ctrl.carousel.push(capture.data[i]);
                     }
                 console.log(ctrl.carousel);
+                carouselGo();
                 }
             )
+    }
+
+    function carouselGo() {
+        let path = "./_media/";
+        let image_path = "";
+        let i = 0;
+        for (i = 0; i < ctrl.carousel.length; i++){
+            image_path = path + ctrl.carousel[i];
+            console.log(image_path);
+        }
+        setTimeout(carouselGo, 5000);
     }
 
 // NAV functions
@@ -30,10 +42,11 @@ function RootController($http) {
     }
 
 // ON-LOAD Functions
-    getCarousel();
+    getCarouselImages();
 
 // defined FUNCTIONS 
     // ctrl._getAllFilesFromFolder = _getAllFilesFromFolder;
-    ctrl.getCarousel = getCarousel;
+    ctrl.getCarouselImages = getCarouselImages;
+    ctrl.carouselGo = carouselGo;
     ctrl.orderLink = orderLink;
 }
