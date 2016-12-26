@@ -15,7 +15,11 @@ function RootController($http) {
         $http.get("./carousel_images.json")
             .then( 
                 (capture) => {
-                    console.log(capture.data);
+                    dict_len = Object.keys(capture.data).length;
+                    for (i = 0; i < dict_len; i++){
+                        ctrl.carousel.push(capture.data[i]);
+                    }
+                console.log(ctrl.carousel);
                 }
             )
     }
