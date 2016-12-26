@@ -8,11 +8,14 @@ function RootController($http) {
     ctrl.carousel = [];
 
 // controller FUNCTIONS
+
+// grab endpoints from carousel_images.json
     function getCarousel() {
         let i = 0;
         $http.get("./carousel_images.json")
-            .then( (data) => {
-                console.log(data);
+            .then( 
+                (data) => {
+                    
                 }
             )
     }

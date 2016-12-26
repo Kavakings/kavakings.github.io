@@ -9,7 +9,9 @@ class CollectImagePaths(object):
         return self.image_files
 
     def makeJson(self):
-        data = self.image_files
+        data = {}
+        for index, item in enumerate(self.image_files):
+            data[index] = item
         with open('carousel_images.json', 'w+') as self.outfile:
             json.dump(data, self.outfile)
 
