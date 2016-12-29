@@ -69,21 +69,27 @@
             >
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href=""
-                            ng-click="root.orderLink()"
+                        <a href="#"
+                            ng-click="root.showOrderLink()"
                         >Order
                         </a>
                     </li>
                     <li>
-                        <a href="#">About Us
+                        <a href="#"
+                            ng-click="root.showAboutUs()"
+                        >About Us
                         </a>
                     </li>
                     <li>
-                        <a href="#">What is Kava?
+                        <a href="#"
+                            ng-click="root.showWhatIsKava()"
+                        >What is Kava?
                         </a>
                     </li>
                     <li>
-                        <a href="#">Products
+                        <a href="#"
+                            ng-click="root.showProducts()"
+                        >Products
                         </a>
                     </li>
                 </ul>
@@ -101,137 +107,160 @@
     </nav> <!-- END navbar -->
     <div class="container">
         <div class="row">
-    <div class="contact">
-        <h1>Order Kava<br />
-            <small>Contact us @</small>
-        </h1>
-        <span class="emails">Jim@kavakings.com OR Sifa@kavakings.com</span>
-    </div>
+    <div class="main-content">
+        <div class="col-md-12">
+<!-- CHANGE W/ ANGULAR -->
 
-    <!-- Who is block with Grey -->
-    <h1>Who are the Kava Kings?</h1>
-        <p><strong>Kava Kings, Ltd.</strong> are purveyors of the finest gourmet root and instant 
-        kava from throughout the Pacific region. Break your coffee and alcohol 
-        habit and try a natural “anti-caffeine” drink.</p>
+<!-- WHO ARE -->
+            <div ng-show="root.aboutUs">
+                <h1>Who are the Kava Kings?</h1>
+                <p><strong>Kava Kings, Ltd.</strong> are purveyors of the finest gourmet root and instant 
+                kava from throughout the Pacific region. Break your coffee and alcohol 
+                habit and try a natural “anti-caffeine” drink.</p>
+            </div>
 
+<!-- WHAT IS KAVA -->
+            <div ng-show="root.whatIs">
+                <h1>What is Kava?</h1>
+                <p><strong>Kava 卡瓦胡椒</strong> <em>(Piper methysticum)</em> is consumed for medicinal, religious, 
+                political, cultural and social purposes throughout the islands of the 
+                South Pacific. A shrub that thrives in loose, well-drained soils where 
+                plenty of air can reach the roots, kava plants are typically harvested 
+                at 3-4 years of age. Pacific Islanders have consumed kava root tea for 
+                over 3,000 years. We invite you to experience the tradition for yourself.
+                As time has progressed so have the techniques used to make this sacred 
+                island drink. We want you to be able to experience the best kava 
+                available. At Kava Kings we strive to make the highest quality kava 
+                available to the kava community and consumers all over the world. 
+                </p>
+            </div>
 
-    <h1>VIBE INSTANT KAVA</h1>
-    New to Kava? This is our <em>most user-friendly</em> kava drink. Just stir this <em>instant</em> Kava into 
-    water, juice, or your favorite beverage and it dissolves instantly.  
-    No need to use a strainer bag with this product!
-    Experience the comfort of kava with minimum effort! This product is a 
-    highly concentrated water extract of fresh kava root juice that is then 
-    dehydrated.  Since it is not ground, it does not contain the fibrous 
-    root material and therefor does not need to be strained. Made in Vanuatu 
-    using absolutely no chemical solvents, just kava and rain water. This is 
-    just about as close as you can get to drinking kava in a Vanuatu Nakamal 
-    (kava bar). 
-    Vibe Instant is <em>twice as potent</em> as dried root powder. Serving for (1) person is approximately 5 grams.
+<!-- CONTACT -->
+            <div ng-show="root.contact">
+                <h1>Order Kava<br />
+                    <small>Contact us @</small>
+                </h1>
+                <span class="emails">Jim@kavakings.com OR Sifa@kavakings.com</span>
+            </div>
 
-    <div class="pricesBox" id="amounts">
-        10 grams----30 RMB<br />
-        100 grams----280 RMB<br />
-        250 grams----656 RMB<br />
-    </div>
+<!-- PRODUCTS -->
+            <div ng-show="root.products">
+            <h1>Our Products</h1>
+<!-- INSTANT KAVA -->
+                <div ng-show="root.vibe">
+                    <h1>VIBE INSTANT KAVA</h1>
+                    New to Kava? This is our <em>most user-friendly</em> kava drink. Just stir this <em>instant</em> Kava into 
+                    water, juice, or your favorite beverage and it dissolves instantly.  
+                    No need to use a strainer bag with this product!
+                    Experience the comfort of kava with minimum effort! This product is a 
+                    highly concentrated water extract of fresh kava root juice that is then 
+                    dehydrated.  Since it is not ground, it does not contain the fibrous 
+                    root material and therefor does not need to be strained. Made in Vanuatu 
+                    using absolutely no chemical solvents, just kava and rain water. This is 
+                    just about as close as you can get to drinking kava in a Vanuatu Nakamal 
+                    (kava bar). 
+                    Vibe Instant is <em>twice as potent</em> as dried root powder. Serving for (1) person is approximately 5 grams.
 
-    <h1>KAVA ROOT POWDER</h1>
-    <h3>Introducing: Varsity Kava and Fiji Flo Kava</h3>
-    We are proud to offer you only the highest quality Kava Root Powder 
-    available.  Made from 100% “Waka” grade lateral roots, our kava makes a 
-    very potent drink that is guaranteed to satisfy.  We provide simple 
-    instructions so you can easily prepare the traditional kava beverage that 
-    Pacific Islands have been using for centuries. Please see our Recipe Page 
-    for details.
+                    <div class="prices-box">
+                        10 grams----30 RMB<br />
+                        100 grams----280 RMB<br />
+                        250 grams----656 RMB<br />
+                    </div>
+                </div>
 
+    <!-- ROOT POWDER -->
+                <div ng-show="root.rootPowderDetails">
+                    <h1>KAVA ROOT POWDER</h1>
+                    <h3>Introducing: Varsity Kava and Fiji Flo Kava</h3>
+                    We are proud to offer you only the highest quality Kava Root Powder 
+                    available.  Made from 100% “Waka” grade lateral roots, our kava makes a 
+                    very potent drink that is guaranteed to satisfy.  We provide simple 
+                    instructions so you can easily prepare the traditional kava beverage that 
+                    Pacific Islands have been using for centuries. Please see our Recipe Page 
+                    for details.
+                </div>
 
-    <h1>VARSITY KAVA (Root Powder)</h1>
-    The "Best of the best"<br />
+    <!-- VARSITY -->
+                <div ng-show="root.varsity">
+                    <h1>VARSITY KAVA (Root Powder)</h1>
+                    The "Best of the best"<br />
 
-    This knock-your-socks-off kava is the most potent kava root powder 
-    available.  Made from green kava that has not been dried in advance, it 
-    requires special processing that preserves more kavalactones than dried 
-    root powder.  The finished product is nothing less than divine: smooth, 
-    better tasting, and potent beyond compare.
-    A must try for those looking for the absolute best kava experience!
+                    This knock-your-socks-off kava is the most potent kava root powder 
+                    available.  Made from green kava that has not been dried in advance, it 
+                    requires special processing that preserves more kavalactones than dried 
+                    root powder.  The finished product is nothing less than divine: smooth, 
+                    better tasting, and potent beyond compare.
+                    A must try for those looking for the absolute best kava experience!
 
-    <div class="pricesBox" id="amounts">
-        
-        250 grams----270 RMB<br />
-        500 grams----500 RMB<br />
-        1 kilogram----900 RMB
-    </div> 
+                    <div class="prices-box">
+                        
+                        250 grams----270 RMB<br />
+                        500 grams----500 RMB<br />
+                        1 kilogram----900 RMB
+                    </div> 
+                </div>
 
-    <h1>Premium FIJI FLO KAVA (Root Powder)</h1>  
-    Fly with us to a South Pacific Paradise of lush green tropical islands and 
-    unspoiled white sand beaches. Overwhelmingly beautiful, the Islands of Fiji 
-    are home to some of the most warm, relaxed, and friendly people on the 
-    earth. Its not surprising that Kava is so highly valued in their culture 
-    for evoking an atmosphere of relaxation and easy sociability, Kava is 
-    naturally their drink of choice.
-    Throughout the Pacific, Fiji is famous for its fragrant and smooth tasting 
-    kava.We purchase only the Highest quality Kava that Fiji has to offer. This 
-    extra special "Waka Grade Kava" is the most potent lateral root that is 
-    available in Fiji. Grown Organically without pesticides or chemicals. A 
-    perfect elixir for an intimate gathering of good friends and good times.
-    Extra fine grind makes for easy mixing and very little waste. One pound 
-    (453g) of kava powder makes approx. 12 quarts (11.4 liters) of kava 
-    beverage.<br />
+    <!-- PREMIUM FIJI FLO -->
+                <div ng-show="root.fiji">
+                    <h1>Premium FIJI FLO KAVA (Root Powder)</h1>  
+                    Fly with us to a South Pacific Paradise of lush green tropical islands and 
+                    unspoiled white sand beaches. Overwhelmingly beautiful, the Islands of Fiji 
+                    are home to some of the most warm, relaxed, and friendly people on the 
+                    earth. Its not surprising that Kava is so highly valued in their culture 
+                    for evoking an atmosphere of relaxation and easy sociability, Kava is 
+                    naturally their drink of choice.
+                    Throughout the Pacific, Fiji is famous for its fragrant and smooth tasting 
+                    kava.We purchase only the Highest quality Kava that Fiji has to offer. This 
+                    extra special "Waka Grade Kava" is the most potent lateral root that is 
+                    available in Fiji. Grown Organically without pesticides or chemicals. A 
+                    perfect elixir for an intimate gathering of good friends and good times.
+                    Extra fine grind makes for easy mixing and very little waste. One pound 
+                    (453g) of kava powder makes approx. 12 quarts (11.4 liters) of kava 
+                    beverage.<br />
 
-    <div class="pricesBox" id="amounts">
-        
-        250 grams----150 RMB<br />
-        500 grams----250 RMB<br />
-        1 kilogram----450 RMB 
-    </div>
-</div>
+                    <div class="prices-box">
+                        
+                        250 grams----150 RMB<br />
+                        500 grams----250 RMB<br />
+                        1 kilogram----450 RMB 
+                    </div>
+                </div>
+            </div> <!-- ng-show PRODUCTS -->
+
+        </div> <!-- COL-MD-12 -->
+    </div> <!-- main-content -->
+</div> <!-- ROW 1 -->
 
 <div class="row">
     <hr>
-    <div class="col-md-3">
+    <div class="col-xs-12 col-md-6">
+        <h2>INSTANT KAVA</h2>
         <a href="" 
             class="thumbnail"
         >
             <img src="http://kavakings.com/image_main/kavaBag_1.jpg"
-                width="210px"
+                width="310px"
             />
         </a>
-        <button type="button" class="btn btn-default">...Kava</button>
-        <button type="button" class="btn btn-default">Order</button>
+<!-- reveals Instant Kava prices -->
+        <button type="button" class="btn btn-default">INSTANT KAVA</button>
+        <button type="button" class="btn btn-default">ORDER</button>
     </div>
-    <div class="col-xs-6 col-md-3">
+    <div class="col-xs-12 col-md-6">
+        <h2>ROOT POWDER</h2>
         <a href="" 
             class="thumbnail"
         >
             <img src="http://kavakings.com/image_main/kavaBags_2.jpg" 
-                width="210px"
+                width="310px"
             />
         </a>
-        <button type="button" class="btn btn-default">...Kava</button>
-        <button type="button" class="btn btn-default">Order</button>
+<!-- ADD DROPDOWN w/ varsity & fiji flo -->
+<!-- dropdown buttons reveal prices respectfully -->
+        <button type="button" class="btn btn-default">ROOT POWDER</button>
+        <button type="button" class="btn btn-default">ORDER</button>
     </div>
-    <div class="col-xs-6 col-md-3">
-        <a href="" 
-            class="thumbnail"
-        >
-            <img src="http://kavakings.com/image_main/kavaBag_1.jpg" 
-                width="210px"
-            />
-        </a>
-        <button type="button" class="btn btn-default">...Kava</button>
-        <button type="button" class="btn btn-default">Order</button>
-    </div>
-    <div class="col-xs-6 col-md-3">
-        <a href="" 
-            class="thumbnail"
-        >
-            <img src="http://kavakings.com/image_main/kavaBags_2.jpg" 
-                width="210px"
-            />
-        </a>
-        <button type="button" class="btn btn-default">...Kava</button>
-        <button type="button" class="btn btn-default">Order</button>
-    </div>
-</div> <!-- ROW -->
+</div> <!-- ROW 2-->
     </div>
 
 <!-- div class="container" 'ending' tag -->

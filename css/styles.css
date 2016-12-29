@@ -11,6 +11,10 @@ img {
     text-align: center;
 }
 
+.prices-box {
+    background-color: grey;
+}
+
 footer {
     margin: 10px;
 }
