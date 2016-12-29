@@ -13,8 +13,17 @@ function RootController($http) {
     ctrl.image_path = [];
     ctrl.carousel = [];
 
-// controller FUNCTIONS
+// NG-SHOW sections
+    ctrl.aboutUs = false;
+    ctrl.whatIs = false;
+    ctrl.contact = false;
 
+    ctrl.products = false;
+    ctrl.vibePowderDetails = false;
+    ctrl.varsity = false;
+    ctrl.fiji = false;
+
+// controller FUNCTIONS
 // grab endpoints from carousel_images.json
     function getCarouselImages() {
         let i = 0;
@@ -42,18 +51,48 @@ function RootController($http) {
         ctrl.full_carousel = ctrl.carousel;
     }
 
-// NAV functions
-    function orderLink() {
-        alert("yeah!");
+// NG-SHOW NAV functions
+    function showOrderLink() {
+        turnOffContent();
+        ctrl.contact = true;
+    }
+    function showAboutUs() {
+        turnOffContent();
+        ctrl.aboutUs = true;
+    }
+    function showWhatIsKava() {
+        turnOffContent();
+        ctrl.whatIs = true;
+    }
+    function showProducts() {
+        turnOffContent();
+        ctrl.products = true;
+    }
+
+    function turnOffContent() {
+        ctrl.contact = false;
+        ctrl.aboutUs = false;
+        ctrl.whatIs = false;
+        ctrl.products = false;
+        ctrl.vibePowderDetails = false;
+        ctrl.varsity = false;
+        ctrl.fiji = false;
     }
 
 // ON-LOAD Functions
     getCarouselImages();
+    showAboutUs();
 
 // defined FUNCTIONS 
     // ctrl._getAllFilesFromFolder = _getAllFilesFromFolder;
     ctrl.getCarouselImages = getCarouselImages;
     // ctrl.getPaths = getPaths;
     ctrl.carouselGo = carouselGo;
-    ctrl.orderLink = orderLink;
+
+// NAV functions
+    ctrl.showOrderLink = showOrderLink;
+    ctrl.showAboutUs = showAboutUs;
+    ctrl.showWhatIsKava = showWhatIsKava;
+    ctrl.showProducts = showProducts;
+    ctrl.turnOffContent = turnOffContent;
 }
