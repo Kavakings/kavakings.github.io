@@ -6,8 +6,14 @@ body {
     background-color: black;
 }
 
+ul.carousel {
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none;
+}
+
 img {
-    margin: 10px;
+    margin: 5px 0px;
     text-align: center;
 }
 

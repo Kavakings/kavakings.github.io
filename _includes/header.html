@@ -95,13 +95,19 @@
                 </ul>
             </div>
         </div>
+
         <div class="jumbotron">
-            <ul>
-                <li ng-repeat="image in root.full_carousel track by $index">
-                    <div class="layer">
-                        {{ image }}
-                    </div>
-                </li>
-            </ul>
+            <div class="row">
+                <ul class="carousel">
+                    <li ng-repeat="image in root.carousel">
+                        <div class="col-xs-12 col-md-3">
+                            <!-- <img src="{{site.carousel}}{{image}}" /> -->
+                            <!-- <img src="{{site.carousel}}{{image}}" width="180px" /> -->
+                            <img src="{{site.carousel}}" width="180px" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
+
     </nav> <!-- END navbar -->

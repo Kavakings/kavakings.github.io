@@ -34,7 +34,6 @@ function RootController($http) {
                     for (i = 0; i < dict_len; i++){
                         ctrl.image_path.push(capture.data[i]);
                     }
-                console.log(ctrl.image_path);
                 carouselGo();
                 }
             )
@@ -42,13 +41,14 @@ function RootController($http) {
 
     function carouselGo() {
         // let path = "file:///home/billbunkum/git-repos/kavakings/_media/";
-        let path = "./_media/";
+        // let path = "./_media/";
+        let path = "/";
         let i = 0;
         for (i = 0; i < ctrl.image_path.length; i++){
             ctrl.carousel.push(path + ctrl.image_path[i]);
-            console.log(ctrl.carousel);
         }
-        ctrl.full_carousel = ctrl.carousel;
+        console.log(ctrl.carousel);
+        // ctrl.full_carousel = ctrl.carousel;
     }
 
 // NG-SHOW NAV functions
