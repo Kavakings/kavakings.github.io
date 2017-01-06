@@ -103,18 +103,19 @@
                         <div class="col-xs-12 col-md-3">
                             <!-- <img src="_media" /> -->
                             <!-- <img src="_media" width="180px" /> -->
-                            <img src="_media" width="180px" />
+                            <img src="_media" />
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-
     </nav> <!-- END navbar -->
+    <div class="container">
     <div class="container">
         <div class="row">
     <div class="main-content">
-        <div class="col-md-12">
+        <div class="col-md-2"></div>
+        <div class="col-xs-12 col-md-10">
 <!-- CHANGE W/ ANGULAR -->
 
 <!-- WHO ARE -->
@@ -130,10 +131,13 @@
                 <h1>What is Kava?</h1>
                 <p><strong>Kava 卡瓦胡椒</strong> <em>(Piper methysticum)</em> is consumed for medicinal, religious, 
                 political, cultural and social purposes throughout the islands of the 
-                South Pacific. A shrub that thrives in loose, well-drained soils where 
+                South Pacific. 
+                <br />
+                A shrub that thrives in loose, well-drained soils where 
                 plenty of air can reach the roots, kava plants are typically harvested 
                 at 3-4 years of age. Pacific Islanders have consumed kava root tea for 
                 over 3,000 years. We invite you to experience the tradition for yourself.
+                <br />
                 As time has progressed so have the techniques used to make this sacred 
                 island drink. We want you to be able to experience the best kava 
                 available. At Kava Kings we strive to make the highest quality kava 
@@ -245,7 +249,7 @@
             class="thumbnail"
         >
             <img src="http://kavakings.com/image_main/kavaBag_1.jpg"
-                width="310px"
+                width="300px"
             />
         </a>
 <!-- reveals Instant Kava prices -->
@@ -258,7 +262,7 @@
             class="thumbnail"
         >
             <img src="http://kavakings.com/image_main/kavaBags_2.jpg" 
-                width="310px"
+                width="300px"
             />
         </a>
 <!-- ADD DROPDOWN w/ varsity & fiji flo -->
@@ -268,9 +272,7 @@
     </div>
 </div> <!-- ROW 2-->
     </div>
-
-<!-- div class="container" 'ending' tag -->
-</div>
+    </div> <!-- end CONTAINER -->
     <hr>
     <footer>
         <ul class="nav nav-tabs">
@@ -281,15 +283,21 @@
                 </a>
             </li>
             <li>
-                <a href="#">About Us
+                <a href=""
+                    ng-click="root.showAboutUs()"
+                >About Us
                 </a>
             </li>
             <li>
-                <a href="#">What is Kava?
+                <a href=""
+                    ng-click="root.showWhatIsKava()"
+                >What is Kava?
                 </a>
             </li>
             <li>
-                <a href="#">Products
+                <a href=""
+                    ng-click="root.showProducts()"
+                >Products
                 </a>
             </li>
         </ul>
