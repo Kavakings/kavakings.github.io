@@ -5,15 +5,15 @@ body {
     font-size: 20px;
 }
 
-.navbar {
-    background-color: black;
-    font-size: 1.25em;
-}
-
 ul.carousel {
     margin: 0 auto;
     text-align: center;
     list-style-type: none;
+}
+
+img {
+    margin: auto 0;
+    /*text-align: center;*/
 }
 
 h1, h2, .navbar, footer {
@@ -24,14 +24,21 @@ h1, h2, .navbar, footer {
     margin: auto 0;
 }
 
+.navbar {
+    background-color: black;
+    font-size: 1.25em;
+}
+
+
 .main-content {
 
 }
 
-img {
-    margin: auto 0;
-    /*text-align: center;*/
+img.vine-border {
+    text-align: left;
+    width: 100%;
 }
+
 
 .prices-box {
     background-color: grey;

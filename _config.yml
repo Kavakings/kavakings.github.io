@@ -1,5 +1,5 @@
 app: /app.js
-include: [_media]
+include: [_media, _images]
 
 title: Kavakings
 e-mail: Jim@kavakings.com
@@ -9,3 +9,4 @@ single-bag-img: http://kavakings.com/image_main/kavaBag_1.jpg
 double-bag-img: http://kavakings.com/image_main/kavaBags_2.jpg
 
 carousel: _media
+images: _images
