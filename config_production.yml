@@ -1,7 +1,6 @@
 
 app: /rebuild/app.js
-app: /app.js
-include: [_media, _images]
+include: [/rebuild/_media, /rebuild/_images]
 
 title: Kavakings
 e-mail: Jim@kavakings.com
@@ -10,5 +9,5 @@ logo: //kavakings.com/image_main/waveLogo_transparent_white.png
 single-bag-img: http://kavakings.com/image_main/kavaBag_1.jpg
 double-bag-img: http://kavakings.com/image_main/kavaBags_2.jpg
 
-carousel: _media
-images: _images
+carousel: /rebuild/_media
+images: /rebuild/_images

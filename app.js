@@ -1,6 +1,9 @@
 const app = angular.module("root", [])
     .controller("RootCtrl", RootController);
 
+// const app_dev = angular.module("root", [])
+//     .controller("RootCtrl", RootController);
+
 // TURNS OFF 'Possibly unhandled rejection ()'
 // app.config(['$qProvider', function ($qProvider) {
 //     $qProvider.errorOnUnhandledRejections(false);
