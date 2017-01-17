@@ -1,4 +1,5 @@
-app: /app.js
+
+app: /rebuild/app.js
 include: [_media, _images]
 
 title: Kavakings
