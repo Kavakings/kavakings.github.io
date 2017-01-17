@@ -48,7 +48,7 @@ function RootController($http) {
         let path = "/";
         let i = 0;
         for (i = 0; i < ctrl.image_path.length; i++){
-            ctrl.carousel.push(path + ctrl.image_path[i]);
+            ctrl.carousel.push(ctrl.image_path[i]);
         }
         console.log(ctrl.carousel);
         // ctrl.full_carousel = ctrl.carousel;
