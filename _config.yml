@@ -6,9 +6,9 @@ include: [_media, _images]
 title: Kavakings
 e-mail: Jim@kavakings.com
 
-logo: _images/waveLogo_transparent_white.png
-single-bag-img: http://kavakings.com/image_main/kavaBag_1.jpg
-double-bag-img: http://kavakings.com/image_main/kavaBags_2.jpg
+logo: https://_images/waveLogo_transparent_white.png
+single-bag-img: //_images/kavaBag_1.jpg
+double-bag-img: //_images/kavaBags_2.jpg
 
 carousel: _media
 images: _images
