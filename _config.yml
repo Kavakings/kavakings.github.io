@@ -1,5 +1,3 @@
-
-app: /rebuild/app.js
 app: /app.js
 include: [_media, _images]
 
