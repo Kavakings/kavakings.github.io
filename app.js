@@ -45,10 +45,10 @@ function RootController($http) {
     function carouselGo() {
         // let path = "file:///home/billbunkum/git-repos/kavakings/_media/";
         // let path = "./_media/";
-        let path = "/";
+        let path = "https:kavakings.github.io/_media/";
         let i = 0;
         for (i = 0; i < ctrl.image_path.length; i++){
-            ctrl.carousel.push(ctrl.image_path[i]);
+            ctrl.carousel.push(path + ctrl.image_path[i]);
         }
         console.log(ctrl.carousel);
         // ctrl.full_carousel = ctrl.carousel;
