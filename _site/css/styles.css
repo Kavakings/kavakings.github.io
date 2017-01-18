@@ -4,6 +4,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     padding-bottom: 150px;
+    margin: auto 0;
 }
 
 ul.carousel {
@@ -17,12 +18,17 @@ img {
     /*text-align: center;*/
 }
 
+footer {
+    margin: auto 0;
+}
+
 h1, h2, .navbar, footer {
     font-family: 'Arima Madurai', cursive;
 }
 
 .container {
     margin: auto 0;
+    width: 100%;
 }
 
 .navbar {
@@ -45,9 +51,16 @@ img.vine-border {
     background-color: grey;
 }
 
-footer ul .nav {
+footer ul.nav-footer {
     font-size: 1em;
     margin: auto 0;
+    list-style-type: none;
+}
+
+footer ul.nav-footer li {
+    margin-left: 40px;
+    margin-right: 40px;
+    text-overflow: none;
 }
 
 .signature {

@@ -39,7 +39,7 @@
 <body ng-controller="RootCtrl as root"
 > 
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="container">
             <div class="navbar-header">
                 <button type="button" 
                         class="navbar-toggle collapsed" 
@@ -100,18 +100,18 @@
             </div>
         </div>
 
-        <div class="jumbotron">
-            <div class="row">
-                <ul class="carousel">
-                    <li ng-repeat="pic in root.carousel">
-                        <div class="col-xs-12 col-md-3">
-                            <!-- <img src="{{site.carousel}}{{pic}}" /> -->
-                            <!-- <img src="{{site.carousel}}{{pic}}" width="180px" /> -->
-                            <img ng-src="{{pic}}" />
-                        </div>
-                    </li>
-                </ul>
+<!--         <div class="row">
+            <div class="col-xs-12">
+                <div class="jumbotron">
+                    <ul class="carousel">
+                        <li ng-repeat="pic in root.carousel">
+                                <img ng-src="{{pic}}" 
+                                    alt="carousel"
+                                />
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </div> -->
     </nav> <!-- END navbar -->
     <div class="container">
