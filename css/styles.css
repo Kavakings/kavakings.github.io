@@ -45,9 +45,9 @@ img.vine-border {
     background-color: grey;
 }
 
-footer .nav {
-    margin: 10px;
+footer ul .nav {
     font-size: 1em;
+    margin: auto 0;
 }
 
 .signature {
