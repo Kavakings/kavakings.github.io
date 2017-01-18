@@ -11,6 +11,7 @@ const app = angular.module("root", [])
 
 function RootController($http) {
     const ctrl = this;
+    // $.material.init();
 
 // controller SCALARS
     ctrl.image_path = [];
