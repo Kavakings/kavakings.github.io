@@ -165,9 +165,7 @@
 
         <!-- PRODUCTS -->
                     <div ng-show="root.products">
-                    <h1>Our Products<br />
-                        <small>First Step: Instant Kava or Root Powder?</small>
-                    </h1>
+                    <h1>Our Products</h1>
         <!-- INSTANT KAVA -->
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
@@ -202,14 +200,15 @@
                                 </div>
                             </div>
 
-<!-- vibe instant prices -->
-<div ng-show="root.vibeInstantPrices">
-    <div class="prices-box">
-        10 grams----30 RMB<br />
-        100 grams----280 RMB<br />
-        250 grams----656 RMB<br />
-    </div>
-</div>
+                            <!-- vibe instant prices -->
+                            <div ng-show="root.vibeInstantPrices">
+                                <div class="prices-box">
+                                    10 grams----30 RMB<br />
+                                    100 grams----280 RMB<br />
+                                    250 grams----656 RMB<br />
+                                </div>
+                            </div>
+
                     <!-- ROOT POWDER -->
                             <div class="col-xs-12 col-md-6">
                                 <div ng-show="root.rootPowderDetails">
@@ -233,21 +232,16 @@
                         </div> <!-- products general row -->
             <!-- VARSITY -->
                         <div ng-show="root.varsity">
-                            <h1>VARSITY KAVA (Root Powder)</h1>
-                            The "Best of the best"
-                            <br />
-                            This knock-your-socks-off kava is the most potent kava root powder 
-                            available.  Made from green kava that has not been dried in advance, it 
-                            requires special processing that preserves more kavalactones than dried 
-                            root powder.  The finished product is nothing less than divine: smooth, 
-                            better tasting, and potent beyond compare.
-                            A must try for those looking for the absolute best kava experience!
-
-                            <button type="button"
-                                class="btn btn-default btn-lg"
-                                ng-click="root.showVarsityRootPrices()"
-                            >Prices
-                            </button>
+                            <h2>VARSITY KAVA ROOT POWDER<br />
+                                <small>The best of the best</small>
+                            </h2>
+                            <p>
+                            This knock-your-socks-off kava is the <em>most potent</em> kava root powder 
+                            available. Made from green kava that has not been dried in advance, it requires special processing that preserves more kavalactones than dried root powder. 
+                            </p>
+                            <p>
+                            The finished product is nothing less than divine: smooth, better tasting, and potent beyond compare. A must try for those looking for the absolute best kava experience!
+                            </p>
 
                             <!-- varsity root prices -->
                             <div ng-show="root.varsityRootPrices">
@@ -261,22 +255,14 @@
 
             <!-- PREMIUM FIJI FLO -->
                         <div ng-show="root.fiji">
-                            <h1>Premium FIJI FLO KAVA (Root Powder)</h1>  
-                            Fly with us to a South Pacific Paradise of lush green tropical islands and 
-                            unspoiled white sand beaches. Overwhelmingly beautiful, the Islands of Fiji 
-                            are home to some of the most warm, relaxed, and friendly people on the 
-                            earth. Its not surprising that Kava is so highly valued in their culture 
-                            for evoking an atmosphere of relaxation and easy sociability, Kava is 
-                            naturally their drink of choice.
-                            <br />
-                            Throughout the Pacific, Fiji is famous for its fragrant and smooth tasting 
-                            kava.We purchase only the Highest quality Kava that Fiji has to offer. This 
-                            extra special "Waka Grade Kava" is the most potent lateral root that is 
-                            available in Fiji. Grown Organically without pesticides or chemicals. A 
-                            perfect elixir for an intimate gathering of good friends and good times.
-                            Extra fine grind makes for easy mixing and very little waste. One pound 
-                            (453g) of kava powder makes approx. 12 quarts (11.4 liters) of kava 
-                            beverage.<br />
+                            <h2>FIJI FLO KAVA ROOT POWDER</h2> 
+                            <p>
+                            Fly with us to a South Pacific Paradise of lush green tropical islands and unspoiled white sand beaches. Overwhelmingly beautiful, the Islands of Fiji are home to some of the most warm, relaxed, and friendly people on the earth.
+                            </p>
+                            <p>
+                            This extra special "Waka Grade Kava" is the most potent lateral root that is available in Fiji. Grown Organically without pesticides or chemicals. A perfect elixir for an intimate gathering of good friends and good times. Extra fine grind makes for easy mixing and very little waste. 
+                            </p>
+<!--                             One pound (453g) of kava powder makes approx. 12 quarts (11.4 liters) of kava beverage. -->
 
                             <!-- fiji root prices -->
                             <div ng-show="root.fijiRootPrices">
@@ -297,8 +283,8 @@
     </div> <!-- COL-MD-12 -->
 </div> <!-- ROW 1 -->
 
+<hr>
 <div class="row">
-    <hr>
     <div class="col-xs-12 col-md-6">
         <h2>INSTANT KAVA</h2>
         <a href="" 
@@ -331,24 +317,28 @@
         </a>
 <!-- ADD DROPDOWN w/ varsity & fiji flo -->
 <!-- dropdown buttons reveal prices respectfully -->
-        <div class="dropdown">
+        <div class="btn-group">
             <button class="btn btn-default dropdown-toggle"
-                type="button" 
-                id="rootdropdown"
-                data-target="dropdown"
+                type="button"
+                data-toggle="dropdown"
                 aria-haspopup="true"
-                aria-expanded="true"
+                aria-expanded="false"
             >MORE DETAILS
                 <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu"
-                aria-labelledby="rootdropdown"
-            >
+            <ul class="dropdown-menu">
                 <li>
-                    <a href="#">Varsity Kava Root</a>
+                    <a href="#"
+                        ng-click="root.showVarsityRootOnly()"
+                    >
+                        Varsity Kava Root</a>
                 </li>
                 <li>
-                    <a href="#">Fiji Flo Root</a>
+                    <a href="#"
+                        ng-click="root.showFijiFloOnly()"
+                    >
+                        Fiji Flo Root
+                    </a>
                 </li>
             </ul>
         </div>
@@ -356,10 +346,10 @@
             class="btn btn-default"
         >ORDER
         </button>
-    </div>
+    </div> <!-- col -->
 </div> <!-- ROW 2-->
     </div>
-    <hr>
+<hr>
 <div class="row">
     <footer class="navbar navbar-inverse navbar-fixed-bottom"
         role="navigation"

@@ -26,8 +26,8 @@ function RootController($http) {
     ctrl.rootPowderDetails = false;
     ctrl.vibeInstantDetails = false;
     ctrl.vibeInstantMore = false;
-    ctrl.varsity = false;
-    ctrl.fiji = false;
+    ctrl.varsity = false; //houses block of text
+    ctrl.fiji = false; //houses block of text
 
     ctrl.vibeInstantPrices = false;
     ctrl.varsityRootPrices = false;
@@ -88,6 +88,20 @@ function RootController($http) {
         ctrl.vibeInstantMore = true;
     }
 
+    function showVarsityRootOnly() {
+        turnOffContent();
+        ctrl.products = true;
+        ctrl.varsity = true;
+        // ctrl.varsityRootPrices = true;
+    }
+
+    function showFijiFloOnly() {
+    turnOffContent();
+    ctrl.products = true;
+    ctrl.fiji = true;
+    // ctrl.fijiRootPrices = true;
+    }
+
     function turnOffContent() {
         ctrl.contact = false;
         ctrl.aboutUs = false;
@@ -119,5 +133,7 @@ function RootController($http) {
     ctrl.showWhatIsKava = showWhatIsKava;
     ctrl.showProducts = showProducts;
     ctrl.showVibeInstantOnly = showVibeInstantOnly;
+    ctrl.showVarsityRootOnly = showVarsityRootOnly;
+    ctrl.showFijiFloOnly = showFijiFloOnly;
     ctrl.turnOffContent = turnOffContent;
 }
