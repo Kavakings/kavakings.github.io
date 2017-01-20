@@ -23,9 +23,15 @@ function RootController($http) {
     ctrl.contact = false;
 
     ctrl.products = false;
-    ctrl.vibePowderDetails = false;
+    ctrl.rootPowderDetails = false;
+    ctrl.vibeInstantDetails = false;
+    ctrl.vibeInstantMore = false;
     ctrl.varsity = false;
     ctrl.fiji = false;
+
+    ctrl.vibeInstantPrices = false;
+    ctrl.varsityRootPrices = false;
+    ctrl.fijiRootPrices = false;
 
 // controller FUNCTIONS
 // grab endpoints from carousel_images.json
@@ -71,6 +77,15 @@ function RootController($http) {
     function showProducts() {
         turnOffContent();
         ctrl.products = true;
+        ctrl.rootPowderDetails = true;
+        ctrl.vibeInstantDetails = true;
+    }
+
+    function showVibeInstantOnly() {
+        turnOffContent();
+        ctrl.products = true;
+        ctrl.vibeInstantDetails = true;
+        ctrl.vibeInstantMore = true;
     }
 
     function turnOffContent() {
@@ -78,9 +93,14 @@ function RootController($http) {
         ctrl.aboutUs = false;
         ctrl.whatIs = false;
         ctrl.products = false;
-        ctrl.vibePowderDetails = false;
+        ctrl.rootPowderDetails = false;
+        ctrl.vibeInstantDetails = false;
+        ctrl.vibeInstantMore = false;
         ctrl.varsity = false;
         ctrl.fiji = false;
+        ctrl.vibeInstantPrices = false;
+        ctrl.varsityRootPrices = false;
+        ctrl.fijiRootPrices = false;
     }
 
 // ON-LOAD Functions
@@ -98,5 +118,6 @@ function RootController($http) {
     ctrl.showAboutUs = showAboutUs;
     ctrl.showWhatIsKava = showWhatIsKava;
     ctrl.showProducts = showProducts;
+    ctrl.showVibeInstantOnly = showVibeInstantOnly;
     ctrl.turnOffContent = turnOffContent;
 }
