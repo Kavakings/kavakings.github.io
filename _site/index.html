@@ -184,6 +184,8 @@
                                     Vibe Instant is <em>twice as potent</em> as dried root powder. Serving for (1) person is approximately 5 grams.
                                     </p>
                                 </div>
+                            </div> <!-- instant col -->
+                            <div class="col-xs-12 col-md-6">
                                 <div ng-show="root.vibeInstantMore">
                                     <p>
                                     Experience the comfort of kava with minimum effort! This product is a 
@@ -198,7 +200,7 @@
                                     (kava bar).
                                     </p>
                                 </div>
-                            </div> <!-- instant col -->
+                            </div>
 
 <!-- vibe instant prices -->
 <div ng-show="root.vibeInstantPrices">
@@ -329,10 +331,27 @@
         </a>
 <!-- ADD DROPDOWN w/ varsity & fiji flo -->
 <!-- dropdown buttons reveal prices respectfully -->
-        <button type="button" 
-            class="btn btn-default"
-        >MORE DETAILS
-        </button>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle"
+                type="button" 
+                id="rootdropdown"
+                data-target="dropdown"
+                aria-haspopup="true"
+                aria-expanded="true"
+            >MORE DETAILS
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu"
+                aria-labelledby="rootdropdown"
+            >
+                <li>
+                    <a href="#">Varsity Kava Root</a>
+                </li>
+                <li>
+                    <a href="#">Fiji Flo Root</a>
+                </li>
+            </ul>
+        </div>
         <button type="button" 
             class="btn btn-default"
         >ORDER
