@@ -6,6 +6,9 @@ root_dir: https://kavakings.github.io/
 title: Kavakings
 e-mail: Jim@kavakings.com
 
+contact: /contact.html
+contact-production: https://kavakings.github.io/contact.html
+
 logo: https://kavakings.github.io/_images/waveLogo_transparent_white.png
 single-bag-img: https://kavakings.github.io/_images/kavaBag_1.jpg
 double-bag-img: https://kavakings.github.io/_images/kavaBags_2.jpg
