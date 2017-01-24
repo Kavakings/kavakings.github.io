@@ -16,7 +16,9 @@ function RootController($http) {
 // controller SCALARS
     ctrl.image_path = [];
     ctrl.carousel = [];
-    ctrl.notIndexPage = false;
+
+// toggle ORDER button 
+    ctrl.orderButton = true;
 
 // NG-SHOW sections
     ctrl.aboutUs = false;
@@ -62,6 +64,13 @@ function RootController($http) {
         // ctrl.full_carousel = ctrl.carousel;
     }
 
+// Toggles true/false orderButton to change NAV links
+    function orderButtonToggle() {
+        turnOffContent();
+        ctrl.orderButton == true ? false : true;
+        console.log(ctrl.orderButton);
+    }
+
 // NG-SHOW NAV functions
     function showOrderLink() {
         turnOffContent();
@@ -104,6 +113,8 @@ function RootController($http) {
     }
 
     function turnOffContent() {
+        ctrl.orderButton = false;
+
         ctrl.contact = false;
         ctrl.aboutUs = false;
         ctrl.whatIs = false;
@@ -129,6 +140,8 @@ function RootController($http) {
     ctrl.carouselGo = carouselGo;
 
 // NAV functions
+
+    ctrl.orderButtonToggle = orderButtonToggle;
     ctrl.showOrderLink = showOrderLink;
     ctrl.showAboutUs = showAboutUs;
     ctrl.showWhatIsKava = showWhatIsKava;
