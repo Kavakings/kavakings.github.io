@@ -6,6 +6,7 @@ root_dir: https://kavakings.github.io/
 title: Kavakings
 e-mail: Jim@kavakings.com
 
+index: /index.html
 contact: /contact.html
 contact-production: https://kavakings.github.io/contact.html
 

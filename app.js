@@ -16,6 +16,7 @@ function RootController($http) {
 // controller SCALARS
     ctrl.image_path = [];
     ctrl.carousel = [];
+    ctrl.notIndexPage = false;
 
 // NG-SHOW sections
     ctrl.aboutUs = false;
