@@ -18,7 +18,7 @@ function RootController($http) {
     ctrl.carousel = [];
 
 // toggle ORDER button 
-    ctrl.orderButton = true;
+    ctrl.orderButton = false;
 
 // NG-SHOW sections
     ctrl.aboutUs = false;
@@ -66,9 +66,12 @@ function RootController($http) {
 
 // Toggles true/false orderButton to change NAV links
     function orderButtonToggle() {
-        turnOffContent();
-        ctrl.orderButton == true ? false : true;
-        console.log(ctrl.orderButton);
+        turnOffContent().then(
+                ctrl.orderButton = true
+            );  
+        alert(ctrl.orderButton);
+        // ternary does NOT work because of page RELOAD
+        // ctrl.orderButton == true ? false : true;
     }
 
 // NG-SHOW NAV functions
@@ -106,10 +109,10 @@ function RootController($http) {
     }
 
     function showFijiFloOnly() {
-    turnOffContent();
-    ctrl.products = true;
-    ctrl.fiji = true;
-    // ctrl.fijiRootPrices = true;
+        turnOffContent();
+        ctrl.products = true;
+        ctrl.fiji = true;
+        // ctrl.fijiRootPrices = true;
     }
 
     function turnOffContent() {
@@ -132,6 +135,7 @@ function RootController($http) {
 // ON-LOAD Functions
     getCarouselImages();
     showAboutUs();
+    console.log(ctrl.orderButton);
 
 // defined FUNCTIONS 
     // ctrl._getAllFilesFromFolder = _getAllFilesFromFolder;
