@@ -37,6 +37,8 @@ function RootController($http, $location) {
     ctrl.fijiRootPrices = false;
 
 // controller FUNCTIONS
+
+// UNDER CONSTRUCTION
 // grab endpoints from carousel_images.json
     function getCarouselImages() {
         let i = 0;
@@ -65,15 +67,16 @@ function RootController($http, $location) {
     }
 
 // Toggles true/false orderButton to change NAV links
-    function orderButtonToggle() {
-        turnOffContent().then(
-                ctrl.orderButton = true
-            );  
-        alert(ctrl.orderButton);
+    // function orderButtonToggle() {
+    //     turnOffContent().then(
+    //             ctrl.orderButton = true
+    //         );  
+    //     alert(ctrl.orderButton);
         // ternary does NOT work because of page RELOAD
         // ctrl.orderButton == true ? false : true;
-    }
+    // }
 
+// UNDER CONSTRUCTION
 // used to turn on proper ng-show once back from Contact page
     function backFromContactPage() {
         let absUrl = $location.absUrl();
@@ -152,7 +155,7 @@ function RootController($http, $location) {
 // NAV functions
     ctrl.backFromContactPage = backFromContactPage;
 
-    ctrl.orderButtonToggle = orderButtonToggle;
+    // ctrl.orderButtonToggle = orderButtonToggle;
     ctrl.showOrderLink = showOrderLink;
     ctrl.showAboutUs = showAboutUs;
     ctrl.showWhatIsKava = showWhatIsKava;
