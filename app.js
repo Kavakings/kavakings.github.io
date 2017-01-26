@@ -9,7 +9,7 @@ const app = angular.module("root", [])
 //     $qProvider.errorOnUnhandledRejections(false);
 // }]);
 
-function RootController($http) {
+function RootController($http, $location) {
     const ctrl = this;
     // $.material.init();
 
@@ -74,6 +74,12 @@ function RootController($http) {
         // ctrl.orderButton == true ? false : true;
     }
 
+// used to turn on proper ng-show once back from Contact page
+    function backFromContactPage() {
+        let absUrl = $location.absUrl();
+        console.log(absUrl);
+    }
+
 // NG-SHOW NAV functions
     function showOrderLink() {
         turnOffContent();
@@ -84,6 +90,7 @@ function RootController($http) {
         ctrl.aboutUs = true;
     }
     function showWhatIsKava() {
+        backFromContactPage();
         turnOffContent();
         ctrl.whatIs = true;
     }
@@ -135,7 +142,6 @@ function RootController($http) {
 // ON-LOAD Functions
     getCarouselImages();
     showAboutUs();
-    console.log(ctrl.orderButton);
 
 // defined FUNCTIONS 
     // ctrl._getAllFilesFromFolder = _getAllFilesFromFolder;
@@ -144,6 +150,7 @@ function RootController($http) {
     ctrl.carouselGo = carouselGo;
 
 // NAV functions
+    ctrl.backFromContactPage = backFromContactPage;
 
     ctrl.orderButtonToggle = orderButtonToggle;
     ctrl.showOrderLink = showOrderLink;
