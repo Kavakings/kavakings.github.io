@@ -131,9 +131,12 @@
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
-            <div class="item" ng-class="{active:!$index}" ng-repeat="pic in root.carousel">
-                <img ng-src="pic" 
-                    alt="picture">
+            <div class="item" 
+                ng-class="{active:!$index}" 
+                ng-repeat="(pic, value) in root.carousel"
+            >
+                <img ng-src="{{value}}" 
+                    alt="picture" />
               <div class="carousel-caption">
                 ...
               </div>
