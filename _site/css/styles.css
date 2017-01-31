@@ -14,10 +14,10 @@ ul.carousel {
     list-style-type: none;
 }
 
-img {
+/*img {
     margin: auto 0;
-    /*text-align: center;*/
-}
+    text-align: center;
+}*/
 
 footer {
     padding: 0px;
@@ -38,17 +38,17 @@ h1, h2, .navbar, footer {
     font-size: 1.25em;
 }
 
-.carousel-inner .item.active img {
+.carousel-inner > .item > img {
+    margin: 0 auto;
     width: 400px;
     height: 300px;
-    margin: 10px;
 }
 
-.carousel-inner .item {
+/*.carousel-inner .item {
     width: 400px;
     height: 300px;
     margin: 10px;
-}
+}*/
 
 
 .main-content-right {
