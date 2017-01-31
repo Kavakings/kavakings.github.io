@@ -239,19 +239,19 @@
                         </p>
                     </div>
 
-        <!-- CONTACT -->
-                    <div ng-show="root.contact">
-                        <h1>Order Kava<br />
-                            <small>Contact us @</small>
-                        </h1>
-                        <span class="emails">
-                            Jim [at] kavakings.com OR Sifa [at] kavakings.com
-                        </span>
-                    </div>
-
         <!-- PRODUCTS -->
                     <div ng-show="root.products">
-                    <h1>Our Products</h1>
+                    <h1>Our Products<br />
+                        <small>
+                            <a href="/contact.html">
+                                <button class="btn btn-default" 
+                                    type="button"
+                                >
+                                    Contact us for prices
+                                </button>
+                            </a>
+                        </small>
+                    </h1>
         <!-- INSTANT KAVA -->
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
@@ -469,18 +469,15 @@
                 </li>
                 <li>
                     <a href=""
-                        ng-click="root.showWhatIsKava()"
-                        title="What Is Kava?"
-                    >
-                        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href=""
                         ng-click="root.showProducts()"
                         title="Our Products"
                     >
                         <i class="fa fa-coffee" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
                     </a>
                 </li>
             </ul>

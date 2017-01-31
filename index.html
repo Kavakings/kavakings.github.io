@@ -44,19 +44,19 @@ title: index
                         </p>
                     </div>
 
-        <!-- CONTACT -->
-                    <div ng-show="root.contact">
-                        <h1>Order Kava<br />
-                            <small>Contact us @</small>
-                        </h1>
-                        <span class="emails">
-                            Jim [at] kavakings.com OR Sifa [at] kavakings.com
-                        </span>
-                    </div>
-
         <!-- PRODUCTS -->
                     <div ng-show="root.products">
-                    <h1>Our Products</h1>
+                    <h1>Our Products<br />
+                        <small>
+                            <a href="{{site.contact}}">
+                                <button class="btn btn-default" 
+                                    type="button"
+                                >
+                                    Contact us for prices
+                                </button>
+                            </a>
+                        </small>
+                    </h1>
         <!-- INSTANT KAVA -->
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
