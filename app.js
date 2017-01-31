@@ -9,6 +9,8 @@ const app = angular.module("root", [])
 //     $qProvider.errorOnUnhandledRejections(false);
 // }]);
 
+// INJECTED explanations
+// $location = grabs absURL
 function RootController($http, $location) {
     const ctrl = this;
     // $.material.init();
@@ -57,13 +59,16 @@ function RootController($http, $location) {
     function carouselGo() {
         // let path = "file:///home/billbunkum/git-repos/kavakings/_media/";
         // let path = "./_media/";
-        let path = "https:kavakings.github.io/_media/";
+        ctrl.carouselImage = [];
+        let path = "https://kavakings.github.io/_media/";
         let i = 0;
+
         for (i = 0; i < ctrl.image_path.length; i++){
             ctrl.carousel.push(path + ctrl.image_path[i]);
         }
         console.log(ctrl.carousel);
         // ctrl.full_carousel = ctrl.carousel;
+        ctrl.carouselImage.push(ctrl.carousel[0]);
     }
 
 // Toggles true/false orderButton to change NAV links
@@ -151,7 +156,6 @@ function RootController($http, $location) {
     ctrl.getCarouselImages = getCarouselImages;
     // ctrl.getPaths = getPaths;
     ctrl.carouselGo = carouselGo;
-
 // NAV functions
     ctrl.backFromContactPage = backFromContactPage;
 
