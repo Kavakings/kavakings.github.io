@@ -4,6 +4,7 @@
 
 ## Purpose
 + Friend in China needs an official site for his business which sells premium kava
++ Site is a project of mine to further hone my AngularJS, Jekyll and Bootstrapping skills
 
 ## Functions
 + Site should do the following:
