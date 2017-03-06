@@ -4,6 +4,7 @@
 
 ## Purpose
 + Friend in China needs an official site for his business which sells premium kava
++ Site is a project of mine to further hone my AngularJS, Jekyll and Bootstrapping skills
 
 ## Functions
 + Site should do the following:
@@ -20,6 +21,9 @@
 + will use TRELLO board w/ aspects of SCRUM to maintain workflow
 + work locally, push to GITHUB
 + deploy @ [kavakings]
+
+## Jekyll developing environment
++ use `$ jekyll serve` and open in browser @ `localhost:4000`
 
 
 ### Links @ site

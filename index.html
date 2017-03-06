@@ -17,10 +17,20 @@ title: index
 <!-- WHO ARE -->
                     <div ng-show="root.aboutUs">
                         <h1>Who are the Kava Kings?</h1>
-                        <p><strong>Kava Kings, Ltd.</strong> are purveyors of the finest gourmet root and instant 
-                        kava from throughout the Pacific region. Break your coffee and alcohol 
-                        habit and try a natural “anti-caffeine” drink.
-                        </p>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <p><strong>Kava Kings, Ltd.</strong> are purveyors of the finest gourmet root and instant 
+                                kava from throughout the Pacific region. Break your coffee and alcohol 
+                                habit and try a natural “anti-caffeine” drink.
+                                </p>
+                            </div>
+                            <div class="col-lg-4">
+                                <img ng-src="{{site.images}}kava_tea_with_pineapple.jpg"
+                                    class="kava-tea-with-pineapple"
+                                    alt="kava tea image"
+                                />
+                            </div>
+                        </div>
                     </div>
 
         <!-- WHAT IS KAVA -->
@@ -176,7 +186,7 @@ title: index
                 </div>
             </div> 
         </div> <!-- main-content-right -->
-    </div> <!-- COL-MD-12 -->
+    </div> <!-- COL-XS-12 -->
 </div> <!-- ROW 1 -->
 
 <hr>

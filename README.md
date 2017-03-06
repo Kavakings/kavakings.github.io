@@ -22,6 +22,9 @@
 + work locally, push to GITHUB
 + deploy @ [kavakings]
 
+## Jekyll developing environment
++ use `$ jekyll serve` and open in browser @ `localhost:4000`
+
 
 ### Links @ site
 [kavakings]: http://kavakings.com
