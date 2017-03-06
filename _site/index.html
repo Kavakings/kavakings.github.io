@@ -201,17 +201,17 @@
     <div class="col-xs-2 col-md-2">
         <img ng-src="https://kavakings.github.io/_images//vines.png" 
             class="vine-border"
+            id="text-block"
         />
     </div>
     <div class="col-xs-10 col-md-10">
         <div class="main-content-right">
             <div class="row">
-                <div class="col-xs-11 col-md-10">
-
+                <div class="col-xs-11 col-md-10"> 
 <!-- CHANGE W/ ANGULAR -->
 <!-- WHO ARE -->
                     <div ng-show="root.aboutUs">
-                        <h1>Who are the Kava Kings?</h1>
+                        <h1>About Us</h1>
                         <div class="row">
                             <div class="col-lg-6">
                                 <p><strong>Kava Kings, Ltd.</strong> are purveyors of the finest gourmet root and instant 
@@ -219,8 +219,9 @@
                                 habit and try a natural “anti-caffeine” drink.
                                 </p>
                             </div>
+<!-- <img ng-src="_images/kava_tea_with_pineapple.jpg" -->
                             <div class="col-lg-6">
-                                <img ng-src="_images/kava_tea_with_pineapple.jpg"
+                                <img ng-src="https://kavakings.github.io/_images/kava_tea_with_pineapple.jpg"
                                     class="needs-border"
                                     alt="kava tea image"
                                 />
@@ -396,11 +397,13 @@
             />
         </a>
 <!-- reveals Instant Kava prices -->
-        <button type="button" 
-            class="btn btn-default"
-            ng-click="root.showVibeInstantOnly()"
-        >MORE DETAILS
-        </button>
+        <a href="/index.html#text-block">
+            <button type="button" 
+                class="btn btn-default"
+                ng-click="root.showVibeInstantOnly()"
+            >MORE DETAILS
+            </button>
+        </a>
         <a href="/contact.html">
             <button type="button" 
                 class="btn btn-default"
@@ -485,11 +488,11 @@
                         <i class="fa fa-coffee fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li>
+<!--                 <li>
                     <a href="/index.html">
                         <i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <span class="signature">Darkeyes Design &copy; 2016-2017</span>
