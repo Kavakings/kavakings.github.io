@@ -18,15 +18,16 @@ title: index
                     <div ng-show="root.aboutUs">
                         <h1>Who are the Kava Kings?</h1>
                         <div class="row">
-                            <div class="col-lg-8">
+                            <div class="col-lg-6">
                                 <p><strong>Kava Kings, Ltd.</strong> are purveyors of the finest gourmet root and instant 
                                 kava from throughout the Pacific region. Break your coffee and alcohol 
                                 habit and try a natural “anti-caffeine” drink.
                                 </p>
                             </div>
-                            <div class="col-lg-4">
+<!-- <img ng-src="{{site.images_dev}}kava_tea_with_pineapple.jpg" -->
+                            <div class="col-lg-6">
                                 <img ng-src="{{site.images}}kava_tea_with_pineapple.jpg"
-                                    class="kava-tea-with-pineapple"
+                                    class="needs-border"
                                     alt="kava tea image"
                                 />
                             </div>
@@ -196,8 +197,8 @@ title: index
         <a href="" 
             class="thumbnail"
         >
-            <img src="{{site.single-bag-img}}"
-                width="300px"
+            <img ng-src="{{site.single-bag-img}}"
+                class="needs-border"
             />
         </a>
 <!-- reveals Instant Kava prices -->
@@ -219,8 +220,8 @@ title: index
         <a href="" 
             class="thumbnail"
         >
-            <img src="{{site.double-bag-img}}" 
-                width="300px"
+            <img ng-src="{{site.double-bag-img}}" 
+                class="needs-border"
             />
         </a>
 <!-- ADD DROPDOWN w/ varsity & fiji flo -->

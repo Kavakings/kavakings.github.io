@@ -60,12 +60,13 @@ img.vine-border {
     width: 100%;
 }
 
-img.kava-tea-with-pineapple {
+img.needs-border {
+    margin-top: 10px;
+    background: #ffffff;
+    background: -webkit-radial-gradient(circle, black, white);
+    background: radial-gradient(black, white);
+    padding: 3px;
     width: 100%;
-}
-
-.prices-box {
-    background-color: grey;
 }
 
 footer ul.nav-footer {
