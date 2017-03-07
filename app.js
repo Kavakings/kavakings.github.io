@@ -23,6 +23,7 @@ function RootController($http, $location) {
     ctrl.orderButton = false;
 
 // NG-SHOW sections
+    ctrl.landing = true;
     ctrl.aboutUs = false;
     ctrl.whatIs = false;
     ctrl.contact = false;
@@ -71,15 +72,11 @@ function RootController($http, $location) {
         ctrl.carouselImage.push(ctrl.carousel[0]);
     }
 
-// Toggles true/false orderButton to change NAV links
-    // function orderButtonToggle() {
-    //     turnOffContent().then(
-    //             ctrl.orderButton = true
-    //         );  
-    //     alert(ctrl.orderButton);
-        // ternary does NOT work because of page RELOAD
-        // ctrl.orderButton == true ? false : true;
-    // }
+// BADGE link
+    function showLanding() {
+        turnOffContent();
+        ctrl.landing = true;
+    }
 
 // UNDER CONSTRUCTION
 // used to turn on proper ng-show once back from Contact page
@@ -133,6 +130,7 @@ function RootController($http, $location) {
     function turnOffContent() {
         ctrl.orderButton = false;
 
+        ctrl.landing = false;
         ctrl.contact = false;
         ctrl.aboutUs = false;
         ctrl.whatIs = false;
@@ -149,7 +147,6 @@ function RootController($http, $location) {
 
 // ON-LOAD Functions
     getCarouselImages();
-    showAboutUs();
 
 // defined FUNCTIONS 
     // ctrl._getAllFilesFromFolder = _getAllFilesFromFolder;
@@ -160,6 +157,7 @@ function RootController($http, $location) {
     ctrl.backFromContactPage = backFromContactPage;
 
     // ctrl.orderButtonToggle = orderButtonToggle;
+    ctrl.showLanding = showLanding;
     ctrl.showOrderLink = showOrderLink;
     ctrl.showAboutUs = showAboutUs;
     ctrl.showWhatIsKava = showWhatIsKava;

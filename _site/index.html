@@ -59,7 +59,9 @@
                     href="" 
                     alt="KavaKings Logo"
                 >
-                    <a href="/index.html"><!-- keeps BADGE in line with collapsable links -->
+                    <a href="#"
+                        ng-click="root.showLanding()"
+                    ><!-- keeps BADGE in line with collapsable links -->
                         <img src="https://kavakings.github.io/_images/waveLogo_transparent_white.png"
                             width="200px"
                         >
@@ -104,20 +106,6 @@
                 </ul>
             </div>
         </div>
-<!-- CAROUSEL -->
-<!--         <div class="row">
-            <div class="col-xs-12">
-                <div class="jumbotron">
-                    <ul class="carousel">
-                        <li ng-repeat="pic in root.carousel">
-                                <img ng-src="" 
-                                    alt="carousel"
-                                />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
 
 <!-- BOOTSTRAP carousel -->
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -139,12 +127,6 @@
                     <img ng-src="https://kavakings.github.io/_media/scuba.jpg" 
                         alt="picture" 
                     />
-    <!--             <div class="item" 
-                    ng-class="{active:!$index}" 
-                    ng-repeat="pic in root.carousel track by $index"
-                >
-                    <img ng-src="" 
-                        alt="picture" /> -->
                 </div>
                 <div class="item">
                     <img ng-src="https://kavakings.github.io/_media/mug_jim_partner.jpg" 
@@ -204,12 +186,32 @@
             id="text-block"
         />
     </div>
+<!-- Landing Page -->
+    <div ng-show="root.landing">
+        <div class="col-md-1 col-lg-1"></div>
+        <!-- content COL -->
+        <div class="col-xs-10 col-md-8 col-lg-9">
+            <h1>Welcome to Kavakings.<br />
+                <small>
+                    We sell the delicious anti-caffeine drink known as Kava.
+                </small>
+            </h1>
+            <p>
+                Feel free to look around and don't hesitate to <a href="/contact.html">contact us</a> with any of your questions.
+            </p>
+        </div>
+        <!-- border right -->
+        <div class="col-md-1 col-lg-2"></div>
+    </div>
+
+<!-- rest of Content -->
     <div class="col-xs-10 col-md-10">
         <div class="main-content-right">
             <div class="row">
                 <div class="col-xs-11 col-md-10"> 
 <!-- CHANGE W/ ANGULAR -->
-<!-- WHO ARE -->
+
+<!-- About Us -->
                     <div ng-show="root.aboutUs">
                         <h1>About Us</h1>
                         <div class="row">

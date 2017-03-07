@@ -59,7 +59,9 @@
                     href="" 
                     alt="KavaKings Logo"
                 >
-                    <a href="{{site.index}}"><!-- keeps BADGE in line with collapsable links -->
+                    <a href="#"
+                        ng-click="root.showLanding()"
+                    ><!-- keeps BADGE in line with collapsable links -->
                         <img src="{{site.logo}}"
                             width="200px"
                         >
@@ -104,20 +106,6 @@
                 </ul>
             </div>
         </div>
-<!-- CAROUSEL -->
-<!--         <div class="row">
-            <div class="col-xs-12">
-                <div class="jumbotron">
-                    <ul class="carousel">
-                        <li ng-repeat="pic in root.carousel">
-                                <img ng-src="{{pic}}" 
-                                    alt="carousel"
-                                />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
 
 <!-- BOOTSTRAP carousel -->
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -139,12 +127,6 @@
                     <img ng-src="{{site.carousel}}scuba.jpg" 
                         alt="picture" 
                     />
-    <!--             <div class="item" 
-                    ng-class="{active:!$index}" 
-                    ng-repeat="pic in root.carousel track by $index"
-                >
-                    <img ng-src="{{pic}}" 
-                        alt="picture" /> -->
                 </div>
                 <div class="item">
                     <img ng-src="{{site.carousel}}mug_jim_partner.jpg" 

@@ -9,12 +9,32 @@ title: index
             id="text-block"
         />
     </div>
+<!-- Landing Page -->
+    <div ng-show="root.landing">
+        <div class="col-md-1 col-lg-1"></div>
+        <!-- content COL -->
+        <div class="col-xs-10 col-md-8 col-lg-9">
+            <h1>Welcome to Kavakings.<br />
+                <small>
+                    We sell the delicious anti-caffeine drink known as Kava.
+                </small>
+            </h1>
+            <p>
+                Feel free to look around and don't hesitate to <a href="{{site.contact}}">contact us</a> with any of your questions.
+            </p>
+        </div>
+        <!-- border right -->
+        <div class="col-md-1 col-lg-2"></div>
+    </div>
+
+<!-- rest of Content -->
     <div class="col-xs-10 col-md-10">
         <div class="main-content-right">
             <div class="row">
                 <div class="col-xs-11 col-md-10"> 
 <!-- CHANGE W/ ANGULAR -->
-<!-- WHO ARE -->
+
+<!-- About Us -->
                     <div ng-show="root.aboutUs">
                         <h1>About Us</h1>
                         <div class="row">
